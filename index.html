@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AuraDental — премиальный светлый лендинг для стоматологии или клиники с Yclients, врачами, интерактивным прайсом и картой." />
+    <title>AuraDental | Премиальная стоматология</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slateDeep: "#0F172A",
+              mint: "#8FE3CF",
+              mist: "#F4F7F8"
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              display: ["Manrope", "Inter", "sans-serif"]
+            },
+            boxShadow: {
+              soft: "0 24px 70px rgba(15, 23, 42, .10)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: clip;
+      }
+
+      main *,
+      section * {
+        min-width: 0;
+      }
+
+      @media (max-width: 640px) {
+        [class*="tracking-"] {
+          letter-spacing: 0.18em !important;
+          overflow-wrap: anywhere;
+        }
+
+        .blur-3xl {
+          inset: 0 !important;
+        }
+
+        h1 {
+          font-size: clamp(2.65rem, 12vw, 4rem) !important;
+          line-height: 1.02 !important;
+        }
+
+        h2 {
+          font-size: clamp(2.1rem, 9vw, 3rem) !important;
+          line-height: 1.06 !important;
+        }
+
+        section {
+          scroll-margin-top: 88px;
+        }
+
+        .price-tabs {
+          max-width: calc(100vw - 2.5rem);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-mist text-slateDeep antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-slateDeep/10 bg-white/85 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#" class="font-display text-2xl font-extrabold tracking-tight">Aura<span class="text-teal-500">Dental</span></a>
+        <button class="menu-toggle grid h-11 w-11 place-items-center rounded-2xl border border-slateDeep/10 md:hidden" aria-label="Открыть меню" aria-expanded="false">
+          <span class="h-0.5 w-5 bg-current before:block before:h-0.5 before:w-5 before:-translate-y-1.5 before:bg-current after:block after:h-0.5 after:w-5 after:translate-y-1 after:bg-current"></span>
+        </button>
+        <div class="nav-menu hidden items-center gap-8 text-sm font-semibold text-slateDeep/65 md:flex">
+          <a class="hover:text-teal-600" href="#doctors">Врачи</a>
+          <a class="hover:text-teal-600" href="#price">Прайс</a>
+          <a class="hover:text-teal-600" href="#map">Как добраться</a>
+          <a href="#yclients" class="ms_booking rounded-2xl bg-slateDeep px-5 py-3 text-white transition hover:bg-teal-600">Онлайн-запись</a>
+        </div>
+      </nav>
+      <div class="mobile-panel hidden border-t border-slateDeep/10 bg-white px-5 py-5 md:hidden">
+        <div class="grid gap-4 text-sm font-semibold text-slateDeep/70">
+          <a href="#doctors">Врачи</a>
+          <a href="#price">Прайс</a>
+          <a href="#map">Как добраться</a>
+          <a href="#yclients" class="ms_booking rounded-2xl bg-slateDeep px-5 py-3 text-center text-white">Онлайн-запись</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="pt-28">
+        <div class="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 px-5 py-14 lg:grid-cols-[1.03fr_.97fr] lg:px-8">
+          <div>
+            <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.36em] text-teal-600">Premium dental clinic</p>
+            <h1 class="font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Безболезненное лечение и честная цена до начала приема.</h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-slateDeep/65">Светлый премиальный шаблон для стоматологии: спокойная визуальная система, доверие к врачам, понятные цены и быстрая запись через Yclients.</p>
+            <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+              <a href="#yclients" class="ms_booking rounded-2xl bg-slateDeep px-8 py-4 text-center font-bold text-white shadow-soft transition hover:bg-teal-600">Онлайн-запись</a>
+              <a href="#price" class="rounded-2xl border border-slateDeep/10 bg-white px-8 py-4 text-center font-bold text-slateDeep transition hover:border-teal-500">Посмотреть цены</a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 rounded-[2rem] bg-mint/30 blur-3xl"></div>
+            <div class="relative overflow-hidden rounded-[2rem] bg-white p-3 shadow-soft">
+              <img class="aspect-[4/5] w-full rounded-[1.55rem] object-cover" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1300&q=85" alt="Стоматологическая клиника AuraDental" />
+              <div class="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3 rounded-2xl bg-white/88 p-4 text-center shadow-soft backdrop-blur">
+                <div><b class="block text-xl">12+</b><span class="text-xs text-slateDeep/55">лет опыта</span></div>
+                <div><b class="block text-xl">4.9</b><span class="text-xs text-slateDeep/55">рейтинг</span></div>
+                <div><b class="block text-xl">24/7</b><span class="text-xs text-slateDeep/55">онлайн</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="doctors" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-10 max-w-3xl">
+            <p class="text-xs font-extrabold uppercase tracking-[0.36em] text-teal-600">Команда</p>
+            <h2 class="mt-4 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Врачи, которые объясняют спокойно и лечат точно</h2>
+          </div>
+          <div class="grid gap-5 md:grid-cols-3">
+            <article class="rounded-2xl border border-slateDeep/10 bg-mist p-4">
+              <img class="aspect-[4/5] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85" alt="Доктор Елена Соколова" />
+              <h3 class="mt-5 text-2xl font-extrabold">Елена Соколова</h3>
+              <p class="mt-2 text-slateDeep/58">Терапевт-эндодонтист · стаж 11 лет</p>
+            </article>
+            <article class="rounded-2xl border border-slateDeep/10 bg-mist p-4">
+              <img class="aspect-[4/5] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=85" alt="Доктор Артем Власов" />
+              <h3 class="mt-5 text-2xl font-extrabold">Артем Власов</h3>
+              <p class="mt-2 text-slateDeep/58">Хирург-имплантолог · стаж 14 лет</p>
+            </article>
+            <article class="rounded-2xl border border-slateDeep/10 bg-mist p-4">
+              <img class="aspect-[4/5] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=85" alt="Доктор Мария Лин" />
+              <h3 class="mt-5 text-2xl font-extrabold">Мария Лин</h3>
+              <p class="mt-2 text-slateDeep/58">Ортодонт · стаж 9 лет</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="price" class="py-24">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.36em] text-teal-600">Прайс</p>
+              <h2 class="mt-4 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Интерактивные категории услуг</h2>
+            </div>
+            <div class="price-tabs flex gap-2 overflow-x-auto rounded-2xl bg-white p-1 shadow-soft">
+              <button class="tab active rounded-xl px-5 py-3 text-sm font-bold" data-category="therapy">Терапия</button>
+              <button class="tab rounded-xl px-5 py-3 text-sm font-bold" data-category="surgery">Хирургия</button>
+              <button class="tab rounded-xl px-5 py-3 text-sm font-bold" data-category="ortho">Ортодонтия</button>
+            </div>
+          </div>
+          <div class="price-list mt-10 grid gap-4 md:grid-cols-2"></div>
+        </div>
+      </section>
+
+      <section id="map" class="bg-white py-24">
+        <div class="mx-auto grid max-w-7xl gap-8 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+          <div>
+            <p class="text-xs font-extrabold uppercase tracking-[0.36em] text-teal-600">Адрес</p>
+            <h2 class="mt-4 font-display text-4xl font-extrabold tracking-tight">Клиника рядом с центром</h2>
+            <p class="mt-5 text-slateDeep/62">Москва, ул. Примерная, 12. Парковка во дворе, вход со стороны кофейни.</p>
+            <a href="#yclients" class="ms_booking mt-8 inline-flex rounded-2xl bg-slateDeep px-6 py-4 font-bold text-white transition hover:bg-teal-600">Записаться на прием</a>
+          </div>
+          <iframe class="h-[420px] w-full rounded-2xl border border-slateDeep/10 shadow-soft" title="Карта проезда AuraDental" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=37.586%2C55.742%2C37.632%2C55.762&layer=mapnik"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- Yclients: замените 93432 на ID вашей формы/филиала. -->
+    <script async src="https://w93432.yclients.com/widgetJS" charset="UTF-8"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
